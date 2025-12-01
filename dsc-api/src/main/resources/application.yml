@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521/xe
+    username: nexacro
+    password: nexacro123
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.doosanenc.dsc
+
+server:
+  port: 8080

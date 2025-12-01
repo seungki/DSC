@@ -1,0 +1,9 @@
+<mapper namespace="com.doosanenc.dsc.common.mapper.UserMapper">
+    <select id="findByUserId" resultType="com.doosanenc.dsc.common.model.User">
+        SELECT u.USER_ID, u.PASSWORD, u.NAME, u.ENABLED,
+               r.ROLE_NAME
+        FROM USERS u
+        LEFT JOIN USER_ROLES r ON u.USER_ID = r.USER_ID
+        WHERE u.USER_ID = #{userId}
+    </select>
+</mapper>
